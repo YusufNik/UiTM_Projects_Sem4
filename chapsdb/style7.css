@@ -1,0 +1,245 @@
+/* CUSTOMER ORDER */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+body {
+    background-color: rgb(172, 235, 242);
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin-top: 130px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product {
+    border: 2px solid #000;
+    border-radius: 20px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.product img {
+    width: 100%;
+    height: 200px;
+    max-width: 150px;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.product h2 {
+    font-size: 1.0em;
+    margin: 10px 0;
+}
+
+.product p {
+    margin: 5px 0;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+/* Navigation */
+nav {
+    position: relative;
+    width: 1430px;
+    height: 65px;
+    background: #fff;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1.0;
+    border: 1px solid black;
+}
+
+nav a {
+    position: relative; 
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    padding: 0 23px;
+    z-index: 1;
+    color: black;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+nav a:hover {
+    color: #046dde;
+}
+
+nav img {
+    height: 100%; /* Set the height to match the nav bar height */
+    width: auto; /* Maintain aspect ratio */
+    display: block; /* Ensures proper block layout */
+    margin-right: 10%; /* Adds space between the logo and the links */
+}
+
+nav {
+    position: fixed; /* Fixed position at the top */
+    top: 0; /* Align to the top */
+    width: 97%; /* Full width */
+    height: 70px; /* Height of the nav */
+    background: #fff;
+    border-radius: 13px;
+    display: flex;
+    justify-content: space-between; /* Space out the elements */
+    align-items: center;
+    opacity: 1.0;
+    border: 1px solid black;
+    z-index: 1000; /* Ensure it's on top */
+    padding: 0 20px; /* Add padding for spacing */
+}
+
+nav .nav-left, nav .nav-center, nav .nav-right {
+    display: flex;
+    align-items: center;
+}
+
+nav .nav-left {
+    flex: 1; /* Take up available space to the left */
+    height: 60%;
+    width: auto;
+    padding-left: 20px;
+}
+
+nav .nav-center {
+    flex: 2; /* Center should have more space */
+    justify-content: center; /* Center the content */
+}
+
+nav .nav-right {
+    flex: 1; /* Take up available space to the right */
+    justify-content: flex-end; /* Align items to the right */
+    padding-right: 20px;
+}
+
+nav a {
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0 10px;
+    color: black;
+    font-weight: bold;
+}
+
+nav img {
+    height: 140%; /* Set the height to match the nav bar height */
+    width: auto; /* Maintain aspect ratio */
+    display: block; /* Ensures proper block layout */
+    margin-right: 10%; /* Adds space between the logo and the links */
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.button:active {
+    background-color: #004085;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+/* Ensure consistent styling for buttons */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.button:active {
+    background-color: #004085;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+/* Styling for tables to make them more modern */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #ddd;
+}
+
+/* Additional styling for order details */
+.order-details {
+    display: none;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.order {
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}

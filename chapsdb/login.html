@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form action="signup.php" method="post">
+                <h1>SIGN UP</h1>
+                <div class="logo-icons">
+                    <a class="icon"><i class="fa-solid fa-c"></i></a>
+                    <a class="icon"><i class="fa-solid fa-h"></i></a>
+                    <a class="icon"><i class="fa-solid fa-a"></i></a>
+                    <a class="icon"><i class="fa-solid fa-p"></i></a>
+                    <a class="icon"><i class="fa-solid fa-s"></i></a>
+                </div>
+                <input type="text" name="custID" id="studID" onblur="checkU()" placeholder="Username" required>
+                <input type="text" name="custName" placeholder="Full Name" required>
+                <input type="text" name="custPhone" placeholder="Phone" required>
+                <input type="text" name="custAddress" placeholder="Address" required>
+                <input type="text" name="custPostcode" placeholder="Postcode" required>
+                <select name='custState' class='state' required>
+				    <option value='' disabled selected>Choose State</option>
+                    <option value='Johor'>Johor</option>
+                    <option value='Kedah'>Kedah</option>
+                    <option value='Kelantan'>Kelantan</option>
+                    <option value='Melaka'>Melaka</option>
+                    <option value='Negeri Sembilan'>Negeri Sembilan</option>
+                    <option value='Kuala Lumpur'>Kuala Lumpur</option>
+                    <option value='Pahang'>Pahang</option>
+                    <option value='Pulau Pinang'>Pulau Pinang</option>
+                    <option value='Perak'>Perak</option>
+                    <option value='Perlis'>Perlis</option>
+                    <option value='Selangor'>Selangor</option>
+                    <option value='Terengganu'>Terengganu</option>
+                    <option value='Sarawak'>Sarawak</option>
+                    <option value='Sabah'>Sabah</option>
+                </select>
+                <input type="email" name="custEmail" placeholder="Email" required>
+                <input type="password" id="password" name="password" onblur="checkP()" placeholder="Password" required>
+                
+                <table>
+                    <tr>
+                        <td rowspan="2"><button type="reset" id="reset"><span class='material-symbols-outlined'>ink_eraser</span>Reset</button></td>
+                        <td><button type="submit" name="Submit" id="submit"><span class='material-symbols-outlined'>person_add</span>Sign Up</button></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form action="login.php" method="post">
+                <h1>LOGIN</h1>
+                <div class="social-icons">
+                    <a class="icon"><i class="fa-solid fa-c"></i></a>
+                    <a class="icon"><i class="fa-solid fa-h"></i></a>
+                    <a class="icon"><i class="fa-solid fa-a"></i></a>
+                    <a class="icon"><i class="fa-solid fa-p"></i></a>
+                    <a class="icon"><i class="fa-solid fa-s"></i></a>
+                </div>
+                <span>Enter your username and password</span>
+                <table>
+                    <tr>
+                        <td><img src="image/login.png" class="icon" alt="Username"></td>
+                        <td><input type="text" name="userid" placeholder="Username" required></td>
+                    </tr>
+                    <tr>
+                        <td><img src="image/password.png" class="icon" alt="Password"></td>
+                        <td><input type="password" name="password" placeholder="Password" required></td>
+                    </tr>
+                </table>
+                <button type="submit" name="Submit" id="submit"><span class='material-symbols-outlined'>login</span>Login</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>SIGN UP</h1>
+                    <p>Please fill out your details to become one of our members today!</p>
+                    <button class="hidden" id="login">Login</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Register Now!</h1>
+                    <p>Create an account to access all site features and explore our products!</p>
+                    <button class="hidden" id="register">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+
+</html>
